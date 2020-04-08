@@ -1,20 +1,37 @@
 import React from "react"
-import { Link } from "gatsby"
+// import { Link } from "gatsby"
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+import Layout from "src/components/Layout"
+import CardHome, { CardList } from "src/components/CardHome"
+import SEO from "src/components/seo"
+
+const helpers = [
+  {
+    tag: ["CSS"],
+    title: "Border radius generator",
+    description:
+      "The simplest visual generator for creating border-radius CSS3",
+    button: {
+      to: "/border-radius/",
+      text: "Go to",
+    },
+  },
+]
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
+    <SEO
+      title="The best tools for developers and designers"
+      description="The best tools for developers and designers"
+    />
+
+    <h1>The best tools for developers and designers</h1>
+
+    <CardList>
+      {helpers.map(helper => (
+        <CardHome {...helper} />
+      ))}
+    </CardList>
   </Layout>
 )
 
