@@ -13,6 +13,12 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: `gatsby-plugin-google-adsense`,
+      options: {
+        publisherId: `ca-pub-2590733259179895`,
+      },
+    },
     `gatsby-plugin-styled-components`,
     "gatsby-plugin-root-import",
     `gatsby-transformer-sharp`,
