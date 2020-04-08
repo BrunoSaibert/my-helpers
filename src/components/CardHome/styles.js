@@ -23,11 +23,10 @@ export const CardList = styled.ul`
 `
 
 export const CardHome = styled.li`
-  flex: 1;
   width: 100%;
-  /* height: 150px; */
 
   @media (${props => props.theme.utils.breakpoints.tablet_port}) {
+    flex: 1;
     flex: 0 0 calc((100% - ${gup * (cols - 1) * 2}px) / ${cols - 1});
   }
 
@@ -59,6 +58,7 @@ export const Description = styled.p`
   padding: 0 20px;
   font-size: ${props => props.theme.utils.fontSizes.xs};
   line-height: calc(${props => props.theme.utils.fontSizes.xs} + 5px);
+  margin-bottom: 15px;
 `
 
 export const Button = styled.span`
