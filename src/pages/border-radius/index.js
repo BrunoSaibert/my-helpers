@@ -156,7 +156,7 @@ const BorderRadiusPage = () => {
       </div>
 
       <div className="code">
-        {!copied && <p>Click in CardBorderRadius to copy to clipboard! </p>}
+        {!copied && <p>Click in Card to copy to clipboard! </p>}
         {copied && <p>Copied ✅</p>}
 
         <SyntaxHighlighter
